@@ -5,7 +5,7 @@ from .serializers import *
 
 # Create your views here.
 
-class crudCreate(generics.CreateAPIView):
+class crudCreate(generics.ListCreateAPIView):
     queryset = crudModel.objects.all()
     serializer_class = crudSerializer
     
@@ -13,7 +13,7 @@ class crudRead(generics.ListAPIView):
     queryset = crudModel.objects.all()
     serializer_class = crudSerializer
 
-class crudUpdate(generics.RetrieveAPIView):
+class crudUpdate(generics.RetrieveUpdateAPIView):
     queryset = crudModel.objects.all()
     serializer_class = crudSerializer
     
